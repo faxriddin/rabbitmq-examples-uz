@@ -187,3 +187,7 @@ q, err := ch.QueueDeclare(
 )
 failOnError(err, "Failed to declare a queue")
 ```
+Ушбу давомийлик коди икки тарафга яъни producer ва consumer лар кодларида қўлланилиши керак.
+
+Айни дамда бизнинг ишончимиз комилки task_queue навбат RabbitMQ қайта юкланган тақдирда ҳам йўқолиб қолмайди. Энди биз amqp.Publishing қабул қиладиган amqp.Persistent опциясини қўллаб ҳабарларни турғун кўринишда белгилашимиз керак.
+
