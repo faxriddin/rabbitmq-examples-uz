@@ -70,3 +70,4 @@ log.Printf(" [*] Waiting for messages. To exit press CTRL+C")
 shell1$ go run worker.go
 shell2$ go run new_task.go
 ```
+#Айланма диспетчерлик
