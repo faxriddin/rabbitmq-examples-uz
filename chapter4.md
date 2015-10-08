@@ -15,3 +15,5 @@ err = ch.QueueBind(
   false,
   nil)
 ```
+binding бу exchange ва queue орасидаги ўзаро боғловчи. Бу қуйидагича ўқилиши ҳам мумкин: ушбу exchange даги ҳабарларга навбат қизиқаябди.
+
