@@ -254,7 +254,3 @@ $ go run emit_log_topic.go "kern.critical" "A critical kernel error"
 (Тўлиқ кодлар emit_log_topic.go ва receive_logs_topic.go да келтирилган)
 
 Навбатдаги 6 қўлланмада қандай қилиб айланма саёҳатли ҳабарни узоқ масофадаги процедура қилишни ўрганиш мумкин. 
-
-
-
-
