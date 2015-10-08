@@ -219,5 +219,8 @@ func main() {
 ```
 Барча қайдларни қабул қилиш:
 
+```
+$ go run receive_logs_topic.go "#"
+```
 
 
