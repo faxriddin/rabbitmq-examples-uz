@@ -1,3 +1,3 @@
-# My Awesome Book
+# RabbitMQ misollarda
 
-This file serves as your book's preface, a great place to describe your book's content and ideas.
+Ushbu qo'llanmada RabbitMQ ni misollarda qanday maqsadlarda qo'llash mumkinligi ko'rsatiladi.
