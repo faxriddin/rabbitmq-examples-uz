@@ -68,6 +68,8 @@ func failOnError(err error, msg string) {
   }
 }
 ```
+Сўнгра RabbitMQ серверга боғланамиз:
+
 
 
 
