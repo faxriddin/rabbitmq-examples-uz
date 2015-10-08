@@ -92,3 +92,5 @@ err = ch.Publish(
     Body:        []byte(body),
   })
 ```
+Соддалик учун биз 'severity'(муҳимлик) ни 'info', 'warning' ва 'error' лардан бири каби ифодалашимиз мумкин деб оламиз.
+
