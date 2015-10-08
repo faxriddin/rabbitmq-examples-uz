@@ -192,6 +192,8 @@ log.Printf(" [*] Waiting for messages. To exit press CTRL+C")
 $ go run send.go
 ```
 
+Кейин receiver ни ишга туширинг:
+
 
 
 
