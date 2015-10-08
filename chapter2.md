@@ -117,3 +117,31 @@ shell2$ go run worker.go
 
 Хабарни тасдиқлаш ўзгаришсиз ҳолатда ўчирилган. Бу вақтда уларни қўллаш учун // auto-ack  опциясининг false сини ўзгартириш ва тасдиқ хоссасини ишчи орқали d.Ack(false) жўнатилади. Буни биз бир масала билан амалга оширгандик.
 
+```
+msgs, err := ch.Consume(
+  q.Name, // queue
+  "",     // consumer
+  false,  // auto-ack
+  false,  // exclusive
+  false,  // no-local
+  false,  // no-wait
+  nil,    // args
+)
+failOnError(err, "Failed to register a consumer")
+
+forever := make(chan bool)
+
+go func() {
+  for d := range msgs {
+    log.Printf("Received a message: %s", d.Body)
+    d.Ack(false)
+    dot_count := bytes.Count(d.Body, []byte("."))
+    t := time.Duration(dot_count)
+    time.Sleep(t * time.Second)
+    log.Printf("Done")
+  }
+}()
+
+log.Printf(" [*] Waiting for messages. To exit press CTRL+C")
+<-forever
+```
