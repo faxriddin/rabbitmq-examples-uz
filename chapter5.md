@@ -251,6 +251,7 @@ $ go run emit_log_topic.go "kern.critical" "A critical kernel error"
 
 •	"a.*.#" ли боғланиш "a.#" дан нимаси билан фарқ қилади?
 
+(Тўлиқ кодлар emit_log_topic.go ва receive_logs_topic.go да келтирилган)
 
 
 
