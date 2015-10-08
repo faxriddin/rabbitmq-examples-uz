@@ -174,3 +174,16 @@ q, err := ch.QueueDeclare(
 )
 failOnError(err, "Failed to declare a queue")
 ```
+Ушбу команда тўғри бўлсада юқоридаги созлашларга нисбатаг у ўз-ўзидан ишлаб кетавермайди. Бунга сабаб биз hello номли навбатни давомий эмас тарзда аниқлаб қўйганмиз. RabbitMQ мавжуд навбатларни турли хил созлашлар билан ишлатилишига йўл қўймайди ва бундай қилмоқчи бўлган дастурларга хатолик беради. Амма буни тез айланибўтиш имкони мавжуд келинг навбатни башқа ном билан масалан task_queue каби номлаймиз:
+
+```
+q, err := ch.QueueDeclare(
+  "task_queue", // name
+  true,         // durable
+  false,        // delete when unused
+  false,        // exclusive
+  false,        // no-wait
+  nil,          // arguments
+)
+failOnError(err, "Failed to declare a queue")
+```
