@@ -124,3 +124,4 @@ for _, s := range os.Args[1:] {
   failOnError(err, "Failed to bind a queue")
 }
 ```
+#Барчасини биргаликда қўйсак
