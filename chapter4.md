@@ -67,3 +67,5 @@ err = ch.ExchangeDeclare(
   nil,           // arguments
 )
 ```
+Ва биз ҳабарни жўнатишга тайёрмиз:
+
