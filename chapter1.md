@@ -80,6 +80,34 @@ ch, err := conn.Channel()
 failOnError(err, "Failed to open a channel")
 defer ch.Close()
 ```
+Жўнатмоқ учун биз queue ни жўнатишга эълон қилишимиз керак. Сўнгра биз queue га хабарни беришимиз мумкин:
+```
+q, err := ch.QueueDeclare(
+  "hello", // ном
+  false,   // давомий
+  false,   // ишлатилмаётганда ўчириб ташлаш
+  false,   // ўзи алоҳида
+  false,   // кутмаслик
+  nil,     // аргументлар
+)
+failOnError(err, "Failed to declare a queue")
+
+body := "hello"
+err = ch.Publish(
+  "",     // алмашинув
+  q.Name, // маршрутизациялаш калити
+  false,  // мажбурий
+  false,  // шошилинч
+  amqp.Publishing {
+    ContentType: "text/plain",
+    Body:        []byte(body),
+  })
+failOnError(err, "Failed to publish a message")
+```
+Queue ни эълон қилиш бир хил – лекин у хозирда мавжуд бўлмаса яратилади. Хабар ташкил этувчилари байт массив. Шу сабабли сиз у ерда нимани кодлашни хоҳлаган бўлсангиз ҳаммасини қилсангиз бўлади.
+
+Бу ерда send.go тўлиқ коди келтирилган.
+
 
 
 
