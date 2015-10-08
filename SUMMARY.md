@@ -5,4 +5,4 @@
 * ["Publish (Нашр)/Subscribe (Обуна)"](chapter3.md)
 * ["Маршрутлаш"](chapter4.md)
 * ["Мавзулар"](chapter5.md)
-* [""](chapter6.md)
+* ["Узоқ масофадаги процедурани чақириш (Remote procedure call (RPC))"](chapter6.md)
