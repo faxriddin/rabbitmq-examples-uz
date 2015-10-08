@@ -136,6 +136,56 @@ func failOnError(err error, msg string) {
   }
 }
 ```
+Созлаш sender дагидек. Биз боғланиш ва канални очамиз ва навбатни хабарни қайсидан қабул қилиш керак бўлса ана шунда эълон қиламиз. Эътибор беринг қабул қилаётгандаги навбат жўнатаётган навбат номи билан мос бўлиши керак.
+
+```
+conn, err := amqp.Dial("amqp://guest:guest@localhost:5672/")
+failOnError(err, "Failed to connect to RabbitMQ")
+defer conn.Close()
+
+ch, err := conn.Channel()
+failOnError(err, "Failed to open a channel")
+defer ch.Close()
+
+q, err := ch.QueueDeclare(
+  "hello", // ном
+  false,   // давомийлик
+  false,   // ишлатилмаётганда ўчириш
+  false,   // ўзи алоҳида
+  false,   // кутмаслик
+  nil,     // аргументлар
+)
+failOnError(err, "Failed to declare a queue")
+```
+Эътибор беринг биз бу ерда тўлдирилган queue ни эълон қилдик. Чунки биз қабул қилишни жўнатишдан олдин бошлаган бўлишимиз мумкин эди. Биз хабарни қабул қилиб олишдан олдин уни мавжудлигига ишонч хосил қилишни хоҳладик.
+
+Биз сервердан бизга навбатдан хабарни олиб беришни сўраябмиз. Шундай қилиб у бизга хабарларни асинхрон тарзда жўнатишни бошлайди. Биз эса goroutine да канал (amqp::Consume орқали қайтарилган) дан хабарларни ўқий бошлаймиз.
+
+```
+msgs, err := ch.Consume(
+  q.Name, // queue
+  "",     // consumer
+  true,   // auto-ack
+  false,  // exclusive
+  false,  // no-local
+  false,  // no-wait
+  nil,    // args
+)
+failOnError(err, "Failed to register a consumer")
+
+forever := make(chan bool)
+
+go func() {
+  for d := range msgs {
+    log.Printf("Received a message: %s", d.Body)
+  }
+}()
+
+log.Printf(" [*] Waiting for messages. To exit press CTRL+C")
+<-forever
+```
+Бу ерда receive.go нинг тўлиқ коди.
+
 
 
 
