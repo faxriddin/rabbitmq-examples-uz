@@ -309,3 +309,5 @@ $ go run receive_logs_direct.go info warning error
 $ go run emit_log_direct.go error "Run. Run. Or it will explode."
  [x] Sent 'error':'Run. Run. Or it will explode.'
 ```
+(Тўлиқ код (emit_log_direct.go код) ва (receive_logs_direct.go код) да жойлашган).
+
