@@ -310,5 +310,7 @@ func main() {
 
 Агар сиз қайдларни файлга сақламоқчи бўлсангиз, фақат console ни очинг ва қуйидагини ёзинг:
 
-
+```
+$ go run receive_logs.go > logs_from_rabbit.log
+```
 
