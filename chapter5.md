@@ -241,4 +241,7 @@ $ go run receive_logs_topic.go "kern.*" "*.critical"
 $ go run emit_log_topic.go "kern.critical" "A critical kernel error"
 ```
 
+Ушбу дастурларни ишлатиб роҳатланинг. Эътибор беринг код routing ёки binding key лар ҳақида ҳеч қандай чеклов қўймаябди, сиз routing key нинг иккидан кўп параметрлари билан ишлаб кўришингиз мумкин.
+
+
 
