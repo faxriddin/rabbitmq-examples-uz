@@ -64,4 +64,43 @@ logs    fanout
 
 Аввал биз ҳабарларни қандай қилиб нашр қилганлигимизни эсга олинг:
 
+```
+err = ch.Publish(
+  "",     // exchange
+  q.Name, // routing key
+  false,  // mandatory
+  false,  // immediate
+  amqp.Publishing{
+    ContentType: "text/plain",
+    Body:        []byte(body),
+  })
+```
+Бу ерда биз номсиз ёки одатдаги exchange ни қўллаябмиз: ҳабар навбатга агар мавжуд бўлса routing_key  параметридаги ном билан йўналтирилади.
+
+Энди биз номланган exchange имизда нашр қилишимиз мумкин:
+
+```
+err = ch.ExchangeDeclare(
+  "logs",   // name
+  "fanout", // type
+  true,     // durable
+  false,    // auto-deleted
+  false,    // internal
+  false,    // no-wait
+  nil,      // arguments
+)
+failOnError(err, "Failed to declare an exchange")
+
+body := bodyFrom(os.Args)
+err = ch.Publish(
+  "logs", // exchange
+  "",     // routing key
+  false,  // mandatory
+  false,  // immediate
+  amqp.Publishing{
+          ContentType: "text/plain",
+          Body:        []byte(body),
+  })
+```
+
 
