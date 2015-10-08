@@ -305,3 +305,7 @@ $ go run receive_logs_direct.go info warning error
 ```
 Ва мисол учун, error қайд ҳабарини жўнатиш учун қуйидагича йўл тутинг:
 
+```
+$ go run emit_log_direct.go error "Run. Run. Or it will explode."
+ [x] Sent 'error':'Run. Run. Or it will explode.'
+```
