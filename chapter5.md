@@ -237,5 +237,8 @@ $ go run receive_logs_topic.go "kern.*" "*.critical"
 ```
 Ва қайдларни "kern.critical" ли routing key билан тарқатиш учун қуйидагини ёзинг:
 
+```
+$ go run emit_log_topic.go "kern.critical" "A critical kernel error"
+```
 
 
