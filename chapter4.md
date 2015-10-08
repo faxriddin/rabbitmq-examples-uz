@@ -56,3 +56,14 @@ binding key маъноси exchange турига боғлиқ. fanout exchange �
 
 Ҳар доимгидек биз аввал exchange яратишимиз керак:
 
+```
+err = ch.ExchangeDeclare(
+  "logs_direct", // name
+  "direct",      // type
+  true,          // durable
+  false,         // auto-deleted
+  false,         // internal
+  false,         // no-wait
+  nil,           // arguments
+)
+```
