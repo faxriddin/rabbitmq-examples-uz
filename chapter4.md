@@ -69,3 +69,26 @@ err = ch.ExchangeDeclare(
 ```
 Ва биз ҳабарни жўнатишга тайёрмиз:
 
+```
+err = ch.ExchangeDeclare(
+  "logs_direct", // name
+  "direct",      // type
+  true,          // durable
+  false,         // auto-deleted
+  false,         // internal
+  false,         // no-wait
+  nil,           // arguments
+)
+failOnError(err, "Failed to declare an exchange")
+
+body := bodyFrom(os.Args)
+err = ch.Publish(
+  "logs_direct",         // exchange
+  severityFrom(os.Args), // routing key
+  false, // mandatory
+  false, // immediate
+  amqp.Publishing{
+    ContentType: "text/plain",
+    Body:        []byte(body),
+  })
+```
