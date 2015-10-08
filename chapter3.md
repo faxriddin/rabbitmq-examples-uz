@@ -26,4 +26,15 @@ RabbitMQ нинг ҳабарлашиш моделининг туб ўзак ғо
 
 Бир қанча exchange турлари мавжуд: direct (узлуксиз), topic(мавзули), headers(сарлавҳалар) ва fanout(елпиғич каби тармоқланиш). Биз улардан биттаси охиргиси fanout га эътиборимизни қаратамиз. Келинг exchange ни ушбу турда яратамиз ва уни logs  деб номлаймиз:
 
+```
+err = ch.ExchangeDeclare(
+  "logs",   // name
+  "fanout", // type
+  true,     // durable
+  false,    // auto-deleted
+  false,    // internal
+  false,    // no-wait
+  nil,      // arguments
+)
+```
 
