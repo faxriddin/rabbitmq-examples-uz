@@ -66,3 +66,7 @@ log.Printf(" [*] Waiting for messages. To exit press CTRL+C")
 ```
 Эътибор беринг бизнинг холбаки масаламиз ишлаш вақтини симуляция қилаябди.
 Уларни биринчи қўлланмадагидек ишга туширамиз:
+```
+shell1$ go run worker.go
+shell2$ go run new_task.go
+```
