@@ -225,5 +225,7 @@ $ go run receive_logs_topic.go "#"
 "kern" объектидан барча қайдларни қабул қилиш:
 
 ```
+$ go run receive_logs_topic.go "kern.*"
+```
 
 
