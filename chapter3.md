@@ -134,5 +134,7 @@ amq.gen-JzTY20BRgKO-HjmUJj0wLg.
 
 ![](3.2.png)
 
+Биз fanout exchange ва queue ларни яратдик. Энди биз exchange га бизнинг навбатга ҳабарларни юборишини айтишимиз керак. Бу exchange ва queue орасидаги муносабат binding (боғлам, боғланиш) деб номланади.
+
 
 
