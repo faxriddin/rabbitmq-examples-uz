@@ -332,3 +332,5 @@ logs    exchange        amq.gen-JzTY20BRgKO-HjmUJj0wLg  queue           []
 logs    exchange        amq.gen-vso0PVvyiRIL2WoV3i48Yg  queue           []
 ...done.
 ```
+Натижани қўлланилиши онсон: маълумот logs номли exchange дан сервер томондан бириктирилган номларга мос икки навбатларга кетади. Ва бу айнан биз инобатга олган нарса.
+
