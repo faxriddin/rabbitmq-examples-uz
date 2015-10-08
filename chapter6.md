@@ -312,4 +312,5 @@ rpc_client.go ва rpc_server.go  кодларимизни биргаликда 
 
 ```
 $ go run rpc_server.go
+ [x] Awaiting RPC requests
 ```
