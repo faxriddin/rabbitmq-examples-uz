@@ -113,5 +113,15 @@ err = ch.Publish(
 
 Биз навбат номини бўш сатр билан қолдирган вақтимизда  биз номи генерция қилинган давомий бўлмаган навбатни amqp мижозда яратамиз:
 
+```
+q, err := ch.QueueDeclare(
+  "",    // name
+  false, // durable
+  false, // delete when usused
+  true,  // exclusive
+  false, // no-wait
+  nil,   // arguments
+)
+```
 
 
