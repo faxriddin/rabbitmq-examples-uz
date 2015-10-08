@@ -132,4 +132,7 @@ amq.gen-JzTY20BRgKO-HjmUJj0wLg.
 
 #Боғламлар
 
+![](3.2.png)
+
+
 
