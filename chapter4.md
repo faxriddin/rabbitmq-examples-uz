@@ -97,4 +97,30 @@ err = ch.Publish(
 #Обуна бўлиш (Subscribing)
 
 Ҳабарларни қабул қилиш аввалгидек ишлайверади фақат битта фарқи шундаки, биз ҳар бир бизни қизиқтирган муҳимлик учун алоҳида боғланишларни яратамиз.
+```
+q, err := ch.QueueDeclare(
+  "",    // name
+  false, // durable
+  false, // delete when usused
+  true,  // exclusive
+  false, // no-wait
+  nil,   // arguments
+)
+failOnError(err, "Failed to declare a queue")
 
+if len(os.Args) < 2 {
+  log.Printf("Usage: %s [info] [warning] [error]", os.Args[0])
+  os.Exit(0)
+}
+for _, s := range os.Args[1:] {
+  log.Printf("Binding queue %s to exchange %s with routing key %s",
+     q.Name, "logs_direct", s)
+  err = ch.QueueBind(
+    q.Name,        // queue name
+    s,             // routing key
+    "logs_direct", // exchange
+    false,
+    nil)
+  failOnError(err, "Failed to bind a queue")
+}
+```
