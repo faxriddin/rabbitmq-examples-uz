@@ -233,5 +233,7 @@ $ go run receive_logs_topic.go "*.critical"
 ```
 Сиз бир қанча боғланишларни яратишингиз мумкин:
 ```
+$ go run receive_logs_topic.go "kern.*" "*.critical"
+```
 
 
