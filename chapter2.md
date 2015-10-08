@@ -223,4 +223,5 @@ err = ch.Qos(
 )
 failOnError(err, "Failed to set QoS")
 ```
+#Навбат ўлчами ҳақида изоҳ
 
