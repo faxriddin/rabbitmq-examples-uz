@@ -136,5 +136,13 @@ amq.gen-JzTY20BRgKO-HjmUJj0wLg.
 
 Биз fanout exchange ва queue ларни яратдик. Энди биз exchange га бизнинг навбатга ҳабарларни юборишини айтишимиз керак. Бу exchange ва queue орасидаги муносабат binding (боғлам, боғланиш) деб номланади.
 
-
+```
+err = ch.QueueBind(
+  q.Name, // queue name
+  "",     // routing key
+  "logs", // exchange
+  false,
+  nil
+)
+```
 
