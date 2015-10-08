@@ -19,3 +19,11 @@ binding бу exchange ва queue орасидаги ўзаро боғловчи.
 
 Binding лар қўшимча routing_key параметрларни қабул қилиши мумкин. Channel.Publish  параметри билан чалкашиш бўлмаслиги сабабли биз уни binding key деб номлаймиз. Қуйида биз боғланишни калит билан қандай яратишимиз кўрсатилган:
 
+```
+err = ch.QueueBind(
+  q.Name,    // queue name
+  "black",   // routing key
+  "logs",    // exchange
+  false,
+  nil)
+```
