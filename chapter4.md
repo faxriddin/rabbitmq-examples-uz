@@ -294,3 +294,6 @@ func main() {
 ```
 Агар сиз фақат 'warning' ва 'error' ('info' ни эмас) қайд ҳабарларни сақламоқчи бўлсангиз у ҳолда консолни очиб қуйидагини ёзинг:
 
+```
+$ go run receive_logs_direct.go warning error > logs_from_rabbit.log
+```
