@@ -64,3 +64,4 @@ go func() {
 log.Printf(" [*] Waiting for messages. To exit press CTRL+C")
 <-forever
 ```
+Эътибор беринг бизнинг холбаки масаламиз ишлаш вақтини симуляция қилаябди.
