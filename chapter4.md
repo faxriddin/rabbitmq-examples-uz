@@ -7,3 +7,11 @@
 #Боғланишлар (bindings)
 Аввалги мисолда биз боғланишларни яратгандик.  Сиз кодни ёдга солишингиз мумкин:
 
+```
+err = ch.QueueBind(
+  q.Name, // queue name
+  "",     // routing key
+  "logs", // exchange
+  false,
+  nil)
+```
