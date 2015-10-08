@@ -49,5 +49,15 @@ $ go get github.com/streadway/amqp
 
 send.go да биз аввал кутубхонани import қилишимиз зарур:
 
+```
+package main
+
+import (
+  "fmt"
+  "log"
+
+  "github.com/streadway/amqp"
+)
+```
 
 
