@@ -151,3 +151,9 @@ log.Printf(" [*] Waiting for messages. To exit press CTRL+C")
 Бу тасдиқлаш жараёнидаги тарқалган хатолик. Бу содда хатолик, аммо натижаси жиддий муаммолар келтириши мумкин. Ҳабарлар сизни мижозларингиз узилганида ҳам етказилади (тасодифий етказилиш каби), аммо RabbitMQ тасдиқланмаган ҳабарларни қўйвора олмаганлиги боис у кўпдан-кўп хотирани ейишни бошлайди.
 
 Бундай хатоликларни ушлаш учун rabbitmqctl дан фойдаланиб messages_unacknowledged  майдонини чоп этиш керак:
+```
+$ sudo rabbitmqctl list_queues name messages_ready messagesқ_unacknowledged
+Listing queues ...
+hello    0       0
+...done.
+```
