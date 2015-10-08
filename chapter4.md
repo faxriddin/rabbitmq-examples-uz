@@ -29,3 +29,4 @@ err = ch.QueueBind(
 ```
 binding key маъноси exchange турига боғлиқ. fanout exchange да ушбу қиймат ташлаб кетилади.
 
+#Exchange ни йўналтириш
