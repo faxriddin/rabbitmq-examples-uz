@@ -191,3 +191,15 @@ failOnError(err, "Failed to declare a queue")
 
 Айни дамда бизнинг ишончимиз комилки task_queue навбат RabbitMQ қайта юкланган тақдирда ҳам йўқолиб қолмайди. Энди биз amqp.Publishing қабул қиладиган amqp.Persistent опциясини қўллаб ҳабарларни турғун кўринишда белгилашимиз керак.
 
+```
+err = ch.Publish(
+  "",           // exchange
+  q.Name,       // routing key
+  false,        // mandatory
+  false,
+  amqp.Publishing {
+    DeliveryMode: amqp.Persistent,
+    ContentType:  "text/plain",
+    Body:         []byte(body),
+  })
+```
