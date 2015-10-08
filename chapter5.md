@@ -227,5 +227,6 @@ $ go run receive_logs_topic.go "#"
 ```
 $ go run receive_logs_topic.go "kern.*"
 ```
+Ёки сиз агар фақат барча "critical" қайдларни эшитиш учун:
 
 
