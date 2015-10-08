@@ -316,3 +316,7 @@ $ go run rpc_server.go
 ```
 Фибоначчи сонини олиш учун клиентни ишга туширинг:
 
+```
+$ go run rpc_client.go 30
+ [x] Requesting fib(30)
+```
