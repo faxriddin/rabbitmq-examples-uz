@@ -306,5 +306,7 @@ func main() {
         <-forever
 }
 ```
+(receive_logs.go манба)
+
 
 
