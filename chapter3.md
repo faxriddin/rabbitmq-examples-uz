@@ -145,4 +145,7 @@ err = ch.QueueBind(
   nil
 )
 ```
+Хозирдан бошлаб logs exchange ҳабарларни queue га қўша бошлайди. 
+
+
 
