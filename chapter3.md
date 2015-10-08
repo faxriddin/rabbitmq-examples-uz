@@ -220,5 +220,7 @@ func bodyFrom(args []string) string {
         return s
 }
 ```
+(emit_log.go манба)
+
 
 
