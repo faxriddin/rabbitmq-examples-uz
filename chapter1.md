@@ -186,7 +186,7 @@ log.Printf(" [*] Waiting for messages. To exit press CTRL+C")
 ```
 Бу ерда receive.go нинг тўлиқ коди.
 
-
+#Ҳаммасини биргаликда ишга тушириш
 
 
 
