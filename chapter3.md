@@ -318,4 +318,6 @@ $ go run receive_logs.go > logs_from_rabbit.log
 ```
 $ go run receive_logs.go
 ```
+Ва албатта, қайдларни жўнатиш учун қуйидагини ҳам ишга туширинг:
+
 
