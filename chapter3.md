@@ -325,3 +325,10 @@ $ go run emit_log.go
 ```
 rabbitmqctl list_bindings  ни қўллаб сиз кодингиз аниқ боғламларни яратганлигини ва навбатлар сиз хоҳлагандай эканлигига ишонч хосил қилишингиз мумкин. Ишга туширилган иккита receive_logs.go дастури ёрдамида сиз қуйидагига ўхшашни кўришингиз лозим:
 
+```
+$ sudo rabbitmqctl list_bindings
+Listing bindings ...
+logs    exchange        amq.gen-JzTY20BRgKO-HjmUJj0wLg  queue           []
+logs    exchange        amq.gen-vso0PVvyiRIL2WoV3i48Yg  queue           []
+...done.
+```
