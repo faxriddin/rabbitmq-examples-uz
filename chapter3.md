@@ -40,4 +40,21 @@ err = ch.ExchangeDeclare(
 fanout exchange бу – жуда оддий. Номидан билган бўлсангиз керак, у ўзи билган барча навбатларга тегишли ҳабарларни фақат трансляция қилади. Ва бу бизнинг қайдловчимиз учун айнан керак бўлган нарса.
 
 #Exchange ларни рўйҳатлаш
+Exchange ларни рўйҳатлаш учун доим фойдали бўлган rabbitmqctl ни ишга туширишингиз мумкин:
+
+```
+$ sudo rabbitmqctl list_exchanges
+Listing exchanges ...
+        direct
+amq.direct      direct
+amq.fanout      fanout
+amq.headers     headers
+amq.match       headers
+amq.rabbitmq.log        topic
+amq.rabbitmq.trace      topic
+amq.topic       topic
+logs    fanout
+...done.
+```
+Ушбу рўйҳатда баъзи amq.* exchange лар ва (unnamed (номсиз)) одатдаги exchange лар бор. Улар одатий ҳолатда яратилади, лекин уларни сиз айни дамда ишлатишингиз амримаҳол.
 
