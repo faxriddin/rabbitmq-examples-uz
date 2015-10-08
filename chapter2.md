@@ -228,3 +228,5 @@ failOnError(err, "Failed to set QoS")
 
 #Ҳаммасини биргаликда қўйсак
 
+Бизнинг янги new_task.go нинг коди:
+
