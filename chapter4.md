@@ -303,3 +303,5 @@ $ go run receive_logs_direct.go warning error > logs_from_rabbit.log
 $ go run receive_logs_direct.go info warning error
  [*] Waiting for logs. To exit press CTRL+C
 ```
+Ва мисол учун, error қайд ҳабарини жўнатиш учун қуйидагича йўл тутинг:
+
