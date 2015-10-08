@@ -299,3 +299,7 @@ $ go run receive_logs_direct.go warning error > logs_from_rabbit.log
 ```
 Агар сиз ҳамма қайд ҳабарларини экранда кўришни хоҳласангиз янги командалар сатрини очинг ва қуйидагини теринг:
 
+```
+$ go run receive_logs_direct.go info warning error
+ [*] Waiting for logs. To exit press CTRL+C
+```
