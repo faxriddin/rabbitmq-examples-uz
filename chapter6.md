@@ -10,4 +10,25 @@
 #Навбатни қайта чақириш (Callback queue)
 
 Умуман олганда RPC ни RabbitMQ устида яратиш онсон. Клиент сўров билан ҳабар жўнатади ва сервер ҳабар билан жавоб беради. Жавобни олиш учун биз 'callback' навбат манзилини сўров билан бирга жўнатамиз. Биз одатдаги навбатни қўллашимиз мумкин. Келинг буни қилишга уриниб кўрамиз:
+```
+q, err := ch.QueueDeclare(
+  "",    // name
+  false, // durable
+  false, // delete when usused
+  true,  // exclusive
+  false, // noWait
+  nil,   // arguments
+)
 
+err = ch.Publish(
+  "",          // exchange
+  "rpc_queue", // routing key
+  false,       // mandatory
+  false,       // immediate
+  amqp.Publishing{
+    ContentType:   "text/plain",
+    CorrelationId: corrId,
+    ReplyTo:       q.Name,
+    Body:          []byte(strconv.Itoa(n)),
+  })
+```
