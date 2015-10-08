@@ -193,7 +193,9 @@ $ go run send.go
 ```
 
 Кейин receiver ни ишга туширинг:
-
+```
+$ go run receive.go
+```
 
 
 
