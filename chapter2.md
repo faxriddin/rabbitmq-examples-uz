@@ -90,3 +90,15 @@ shell3$ go run new_task.go Third message...
 shell3$ go run new_task.go Fourth message....
 shell3$ go run new_task.go Fifth message.....
 ```
+Келинг кўрайликчи бизни ишчиларимизга нималар тақсимланибди:
+```
+shell1$ go run worker.go
+ [*] Waiting for messages. To exit press CTRL+C
+ [x] Received 'First message.'
+ [x] Received 'Third message...'
+ [x] Received 'Fifth message.....'
+shell2$ go run worker.go
+ [*] Waiting for messages. To exit press CTRL+C
+ [x] Received 'Second message..'
+ [x] Received 'Fourth message....'
+```
