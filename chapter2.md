@@ -35,3 +35,32 @@ failOnError(err, "Failed to publish a message")
 log.Printf(" [x] Sent %s", body)
 ```
 
+Бизнинг receive.go  скриптимиз ҳам бир оз ўзгаришларни талаб этади: у хабардаги ҳар бир нуқта учун иккинчи ишни бекор қилиб туради. У хабарларни навбатдан олади ва бажаради, шу сабабли келинг уни worker.go деб атаймиз:
+```
+msgs, err := ch.Consume(
+  q.Name, // queue
+  "",     // consumer
+  false,  // auto-ack
+  false,  // exclusive
+  false,  // no-local
+  false,  // no-wait
+  nil,    // args
+)
+failOnError(err, "Failed to register a consumer")
+
+forever := make(chan bool)
+
+go func() {
+  for d := range msgs {
+    log.Printf("Received a message: %s", d.Body)
+    d.Ack(false)
+    dot_count := bytes.Count(d.Body, []byte("."))
+    t := time.Duration(dot_count)
+    time.Sleep(t * time.Second)
+    log.Printf("Done")
+  }
+}()
+
+log.Printf(" [*] Waiting for messages. To exit press CTRL+C")
+<-forever
+```
