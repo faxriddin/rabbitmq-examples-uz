@@ -75,6 +75,11 @@ failOnError(err, "Failed to connect to RabbitMQ")
 defer conn.Close()
 ```
 Боғланиш сокет боғланишни абстрактлаштиради, музокаралар протоколи версияси устида қайғуради, аутентификация билан шуғулланади ва шу каби ишларни биз учун бажаради. Кейин биз асосан бажарилган ишларни ўз ичига олувчи API яшайдиган канал яратамиз:
+```
+ch, err := conn.Channel()
+failOnError(err, "Failed to open a channel")
+defer ch.Close()
+```
 
 
 
