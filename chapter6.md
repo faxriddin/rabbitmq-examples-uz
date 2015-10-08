@@ -32,3 +32,4 @@ err = ch.Publish(
     Body:          []byte(strconv.Itoa(n)),
   })
 ```
+##Ҳабар ҳислатлари
