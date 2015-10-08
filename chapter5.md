@@ -128,5 +128,7 @@ func severityFrom(args []string) string {
         return s
 }
 ```
+receive_logs_topic.go коди:
+
 
 
