@@ -297,3 +297,5 @@ func main() {
 ```
 $ go run receive_logs_direct.go warning error > logs_from_rabbit.log
 ```
+Агар сиз ҳамма қайд ҳабарларини экранда кўришни хоҳласангиз янги командалар сатрини очинг ва қуйидагини теринг:
+
