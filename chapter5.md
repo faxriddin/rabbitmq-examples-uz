@@ -235,5 +235,7 @@ $ go run receive_logs_topic.go "*.critical"
 ```
 $ go run receive_logs_topic.go "kern.*" "*.critical"
 ```
+Ва қайдларни "kern.critical" ли routing key билан тарқатиш учун қуйидагини ёзинг:
+
 
 
