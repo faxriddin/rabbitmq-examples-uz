@@ -203,3 +203,5 @@ func severityFrom(args []string) string {
         return s
 }
 ```
+receive_logs_direct.go коди:
+
