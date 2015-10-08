@@ -306,3 +306,5 @@ func bodyFrom(args []string) int {
         return n
 }
 ```
+rpc_client.go ва rpc_server.go  кодларимизни биргаликда тўлиқ кўришнинг айни вақти етиб келди.
+
