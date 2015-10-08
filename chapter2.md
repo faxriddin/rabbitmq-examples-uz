@@ -82,3 +82,11 @@ shell1$ go run worker.go
 shell2$ go run worker.go
  [*] Waiting for messages. To exit press CTRL+C
 ```
+Командалар сатрининг учтасидан бирида эса биз янги масалаларни юборамиз. Сиз қабул қилувчиларни ишга туширишингиз билан бир қанча хабарларни жўнатишингиз мумкин:
+```
+shell3$ go run new_task.go First message.
+shell3$ go run new_task.go Second message..
+shell3$ go run new_task.go Third message...
+shell3$ go run new_task.go Fourth message....
+shell3$ go run new_task.go Fifth message.....
+```
