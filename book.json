@@ -1,6 +1,7 @@
 {
     "plugins": [
-        "https://plugins.gitbook.com/plugin/ace"
+        "https://plugins.gitbook.com/plugin/ace",
+        "ace"
     ],
     "pluginsConfig": {}
 }
