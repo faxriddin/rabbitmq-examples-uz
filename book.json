@@ -2,7 +2,8 @@
     "plugins": [
         "https://plugins.gitbook.com/plugin/ace",
         "ace",
-        "comments"
+        "comments",
+        "github"
     ],
     "pluginsConfig": {}
 }
