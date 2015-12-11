@@ -1,6 +1,5 @@
 {
     "plugins": [
-        "https://plugins.gitbook.com/plugin/ace",
         "ace",
         "comments",
         "github"
