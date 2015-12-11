@@ -1,7 +1,1 @@
-{
-    "plugins": [
-        "ace",
-        "comments",
-        "github"
-    ]
-}
+{}
