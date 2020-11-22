@@ -1,3 +1,3 @@
 # RabbitMQ misollarda
 
-Ushbu qo'llanmada RabbitMQ ni misollarda qanday maqsadlarda qo'llash mumkinligi ko'rsatiladi.
+Ushbu qo'llanmada RabbitMQ ni qanday maqsadlarda qo'llash mumkinligi misollarda ko'rsatiladi.
